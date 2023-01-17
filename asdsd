@@ -1,0 +1,24 @@
+Zigbee2MQTT.io
+Build ⚙ and Deploy 🚀 
+
+This repository contains the Zigbee2MQTT documentation.
+
+It is based on VuePress v2.
+
+Architecture
+Directory-Structure:
+
+docgen: Some scripts to test and generate the Device-Pages.
+docs: The actual documentation.
+docs/.vuepress: Some VuePress enhancements like Stylesheets.
+public: Static assets.
+supported-devices-component: Vue.js component rendering the devices-overview page.
+navbar.ts: Configuration for the top navigation.
+sidebar.ts: Configuration for the sidebars by individual sections (like Guide).
+vuepress.config.ts: The VuePress config file.
+Docgen
+The docgen-scripts helps to generate and update the individual device-pages (/docs/devices/*.md). zigbee-herdsman-converters exposes a list with supported devices which is used for generation. It also updates the Devices-List used by the Supported-Devices overview page.
+
+The ## Notes section of each page is writte by hand and does not come from zigbee-herdsman-converters. This section gets preserved and can be edited.
+
+Docgen is written in Typescript, so you need a recent version of Node.js and NPM.
